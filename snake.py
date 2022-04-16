@@ -3,12 +3,8 @@ from pygame.locals import *
 BLACK = (0, 0, 0)
 GRAY = (127, 127, 127)
 WHITE = (255, 255, 255)
-RED = (255, 0, 0)
 GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
 YELLOW = (255, 255, 0)
-CYAN = (0, 255, 255)
-MAGENTA = (255, 0, 255)
 ORANGE = (255,165,0)
 COL_WIDTH, COL_HEIGHT, SIZE = 20, 20, 20
 SCREEN_WIDTH, SCREEN_HEIGHT = COL_WIDTH * SIZE, COL_HEIGHT * SIZE
@@ -47,7 +43,7 @@ def draw_apple(apple_position, screen):
 def grid_maker(surface, thick):
     for x in range(SIZE):
         for y in range(SIZE):
-            pygame.draw.rect(surface, (100, 100, 100), (x * COL_WIDTH, y * COL_HEIGHT, COL_WIDTH, COL_HEIGHT), thick)
+            pygame.draw.rect(surface, GRAY, (x * COL_WIDTH, y * COL_HEIGHT, COL_WIDTH, COL_HEIGHT), thick)
 # Function returnig True if snake get apple:
 def snake_get_apple(snake_pos, apple_pos):
     return snake_pos[0] == apple_pos[0] and snake_pos[1] == apple_pos[1]
